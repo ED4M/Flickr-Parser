@@ -13,5 +13,5 @@
 `
 Создать SPA приложение на одном из актуальных JS фреймворках (React, Vue, Angular), которое будет делать запрос на любой открытый API (flickr, instagram и тд) и выводить список популярных постов / картинок по предоставленным макетам. При нажатии на сердце, должен быть отображен alert с идентификатором соответствующей записи. Верстка адаптивная, поддержка всех популярных браузеров последней версии.
 `
-![screeenshot](https://github.com/ED4M/Flickr-Parser/blob/master/images/screenshot1.jpg)
-![screeenshot](https://github.com/ED4M/Flickr-Parser/blob/master/images/screenshot2.jpg)
+![screeenshot](https://github.com/ED4M/Flickr-Parser/blob/master/src/images/screenshot1.jpg)
+![screeenshot](https://github.com/ED4M/Flickr-Parser/blob/master/src/images/screenshot2.jpg)
