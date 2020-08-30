@@ -1,11 +1,11 @@
 export default class FlickrService {
 
-    _api_key = '234040ba1255eeb56d918b034401823f';
-    _url_base = 'https://www.flickr.com/services/rest/?';
+    // _api_key = '';
+    _url_base = 'http://localhost:5000/';
 
     async getResourse(url) {
-        const result = await fetch(`${this._url_base}${url}&api_key=${this._api_key}&format=json&nojsoncallback=1`);
-        // const result = await fetch(`${this._url_base}${url}`);
+        // const result = await fetch(`${this._url_base}${url}&api_key=${this._api_key}&format=json&nojsoncallback=1`);
+        const result = await fetch(`${this._url_base}${url}`);
 
         if (!result.ok) {
             throw Error(`FlickrService: ${url} ${result.status}`);
@@ -15,20 +15,20 @@ export default class FlickrService {
     }
 
     async getPosts() {
-        const hotTagUrl = 'method=flickr.tags.getHotList&period=week&count=1';
+        const hotTagUrl = 'getHotList';
         const popularTag = await this.getResourse(hotTagUrl)
             .then(result => {
                 return result.hottags.tag[0]._content;
             });
 
-        const searchUrl = `method=flickr.photos.search&text='${popularTag}'&sort=interestingness-desc&per_page=20`;
+        const searchUrl = `search`;
         const searchResult = await this.getResourse(searchUrl)
             .then(result => {
                 return result.photos.photo});
 
         const photosInfo = searchResult.map(async photo => {
-            const info = await this.getResourse(`method=flickr.photos.getInfo&photo_id=${photo.id}`);
-            const { photo: photoInfo } = info;
+            const info = await this.getResourse(`getPhotoInfo?photo.id=${photo.id}`);
+            const { photo: photoInfo } = info[0];
 
             return {
                 id: photoInfo.id,
@@ -44,8 +44,8 @@ export default class FlickrService {
         const postsInfo = await Promise.all(photosInfo)
             .then(result => {
                 return result.map(async info => {
-                    const favourites = await this.getResourse(`method=flickr.photos.getFavorites&photo_id=${info.id}`);
-                    info.favourite_counter = favourites.photo.total;
+                    const favourites = await this.getResourse(`getFavorites?photo.id=${info.id}`);
+                    info.favourite_counter = favourites[0].photo.total;
                     return info;
                 })
             })
