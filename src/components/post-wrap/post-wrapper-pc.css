@@ -1,0 +1,77 @@
+ul {
+    list-style: none;
+    padding: 0;
+}
+.post-wrapper-pc {
+    display: flex;
+    flex-direction: row;
+    width: 570px;
+    height: 250px;
+    margin: 0 auto;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    border-radius: 3px;
+}
+.post-wrapper-pc .pic-block {
+    width: 50%;
+}
+.post-wrapper-pc .pic-block .photo-img {
+    width: 100%;
+    height: 250px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.post-wrapper-pc .about-block {
+    width: 50%;
+    padding: 25px 30px;
+    overflow: overlay;
+}
+.post-wrapper-pc .about-block .author .date {
+    float: right;
+    margin-top: 8px;
+    color: #b4b4b4;
+    font-size: 14px;
+}
+.post-wrapper-pc .about-block .author .profile {
+    position: relative;
+}
+.post-wrapper-pc .about-block .author .profile-icon-wrapper {
+    position: absolute;
+    top: -1px;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+}
+.post-wrapper-pc .about-block .author .profile-icon-wrapper img {
+    border-radius: 50%;
+}
+.post-wrapper-pc .about-block .author .name-location {
+    padding-left: 50px;
+    width: 190px;
+}
+.post-wrapper-pc .about-block .author .name-location .username {
+    margin: 0;
+    font-size: 13px;
+}
+.post-wrapper-pc .about-block .author .name-location .location {
+    display: inline-block;
+    min-height: 10px;
+    font-size: 12px;
+}
+.post-wrapper-pc .about-block hr {
+    margin: 14px 0;
+    border: 0.04em #f1f1f1 solid;
+    background-color: #f1f1f1;
+}
+.post-wrapper-pc .about-block .likes {
+    font-size: 15px;
+}
+.post-wrapper-pc .about-block .likes label {
+    margin-left: 6px;
+}
+.post-wrapper-pc .about-block .description {
+    font-size: 12px;
+    margin-top: 7px;
+}

@@ -1,0 +1,93 @@
+ul {
+    list-style: none;
+    padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+}
+
+ul.flexbox-mobile {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+ul.flexbox-mobile > li {
+    width: 300px;
+}
+.post-wrapper-mobile {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+}
+.post-wrapper-mobile .pic-block .photo-img {
+    width: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.post-wrapper-mobile .author-block .date {
+    float: right;
+    margin-top: 19px;
+    margin-right: 10px;
+    color: #b4b4b4;
+    font-size: 14px;
+}
+.post-wrapper-mobile .author-block .profile {
+    position: relative;
+    padding: 10px;
+}
+.post-wrapper-mobile .author-block .profile-icon-wrapper {
+    position: absolute;
+    top: 11px;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+}
+.post-wrapper-mobile .author-block .profile-icon-wrapper img {
+    border-radius: 50%;
+}
+.post-wrapper-mobile .author-block .name-location {
+    padding-left: 50px;
+    width: 190px;
+}
+.post-wrapper-mobile.author-block .name-location .username {
+    margin: 0;
+    font-size: 13px;
+}
+.post-wrapper-mobile .author-block .name-location .location {
+    display: inline-block;
+    min-height: 10px;
+    font-size: 12px;
+}
+.post-wrapper-mobile .about-block {
+    padding: 10px 12px;
+}
+.post-wrapper-mobile .about-block .likes {
+    font-size: 15px;
+}
+.post-wrapper-mobile .about-block .likes label {
+    margin-left: 6px;
+}
+.post-wrapper-mobile .about-block .description {
+    font-size: 12px;
+    margin: 8px 0;
+}
+
+@media (min-width: 900px) {
+    ul.flexbox-mobile {
+        max-height: 3000px;
+    }
+}
+@media (max-width: 900px) and (min-width: 600px) {
+    ul.flexbox-mobile {
+        max-height: 4500px;
+    }
+}

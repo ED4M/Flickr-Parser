@@ -1,0 +1,19 @@
+.change-view-button {
+    display: block;
+    margin: 20px auto;
+    padding: 6px 19px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e6e6ff;
+}
+.change-view-button:focus {
+    outline: none;
+}
+.change-view-button:active {
+    background-color: #dadaff;
+}
+.preloader-icon {
+    display: block;
+    margin: 50px auto;
+    height: 200px;
+}
